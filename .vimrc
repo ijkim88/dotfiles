@@ -93,7 +93,8 @@ nnoremap <c-t> :tabnew<cr>
 " Move between buffers
 nnoremap ] :bn<cr>
 nnoremap [ :bp<cr>
-nnoremap <leader>/b :buffers<cr>
+nnoremap <leader>b :buffers<cr>
+nnoremap <leader><tab> <c-^>
 
 " Easier way to switch between open/closing brace
 map <tab> %
