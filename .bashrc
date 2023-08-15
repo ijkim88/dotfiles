@@ -9,6 +9,6 @@ fi
 # export SYSTEMD_PAGER=
 
 # User specific aliases and functions
-alias vi=vim
+alias vi='TERM=screen-256color vim'
 alias ll='ls -la --color'
 alias tree='tree -C -I "__pycache__|*.pyc"'
