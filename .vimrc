@@ -144,14 +144,3 @@ set linebreak
 set nolist
 set textwidth=120
 set formatoptions=tcroq
-
-""""""""""""""""""""
-" Fold Configuration
-""""""""""""""""""""
-
-set foldmethod=syntax
-set foldnestmax=3
-"set nofoldenable
-set foldlevel=1
-
-nnoremap <space> za
