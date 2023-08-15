@@ -1,38 +1,3 @@
-"""""""""""""""""""""""""""""""""""""
-" Let Vundle handle plugin management
-"""""""""""""""""""""""""""""""""""""
-set nocompatible
-filetype off
-
-" Set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" Let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-
-" List of Plugins
-Plugin 'tpope/vim-surround'
-"Plugin 'sjbach/lusty'
-Plugin 'Shougo/vimproc.vim'
-Plugin 'Shougo/unite.vim'
-"Plugin 'altercation/vim-colors-solarized'
-Plugin 'benmills/vimux'
-
-" All of your plugins must be added before the following line
-call vundle#end()
-filetype plugin indent on
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-
-" Brief help
-" :PluginList	    - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean	    - confirms removal of unused plugins; append `!` to auto-approve removal
-
 """""""""""""""""""""""""""
 " VIM General Configuration
 """""""""""""""""""""""""""
@@ -94,6 +59,7 @@ set wildmode=list:longest
 " Split windows
 nnoremap <leader>s :split<cr><c-w>l
 nnoremap <leader>vs :vsplit<cr><c-w>j
+nnoremap <leader>cs <c-w>c
 
 " Split order
 set splitbelow
@@ -123,6 +89,11 @@ nnoremap <c-t> :tabnew<cr>
 "inoremap <c-[> <esc>:tabprevious<cr>i
 "inoremap <c-]> <esc>:tabnext<cr>i
 "inoremap <c-t> <esc>:tabnew<cr>i
+
+" Move between buffers
+nnoremap ] :bn<cr>
+nnoremap [ :bp<cr>
+nnoremap <leader>/b :buffers<cr>
 
 " Easier way to switch between open/closing brace
 map <tab> %
@@ -184,20 +155,3 @@ set foldnestmax=3
 set foldlevel=1
 
 nnoremap <space> za
-
-""""""""""""""""""""""
-" Plugin Configuration
-""""""""""""""""""""""
-
-" Unite
-nnoremap <leader>/f :Unite -start-insert file file_rec/async<cr>
-nnoremap <leader>/b :Unite buffer<cr>
-nnoremap <leader>/g :Unite grep:.<cr>
-
-" Vimux
-map <leader>vr :call VimuxRunCommand("clear; python -m unittest discover tests")<cr>
-map <leader>vp :VimuxPromptCommand<cr>
-map <leader>vl :VimuxRunLastCommand<cr>
-map <leader>vq :VimuxCloseRunner<cr>
-map <leader>vi :VimuxInspectRunner<cr>
-map <leader>vx :VimuxInterruptRunner<cr>
