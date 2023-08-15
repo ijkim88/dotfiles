@@ -83,18 +83,15 @@ map <c-h> <c-w>h
 map <c-l> <c-w>l
 
 " Move between tabs
-nnoremap <c-[> :tabprevious<cr>
-nnoremap <c-]> :tabnext<cr>
-nnoremap <c-t> :tabnew<cr>
-"inoremap <c-[> <esc>:tabprevious<cr>i
-"inoremap <c-]> <esc>:tabnext<cr>i
-"inoremap <c-t> <esc>:tabnew<cr>i
+nnoremap <leader>tn :tabnew<cr>
+nnoremap <leader>te :tabedit<space>
+nnoremap <leader>tc :tabc<cr>
 
 " Move between buffers
 nnoremap ] :bn<cr>
 nnoremap [ :bp<cr>
-nnoremap <leader>b :buffers<cr>
-nnoremap <leader><tab> <c-^>
+nnoremap <leader>b :buffers<cr>:buffer<space>
+nnoremap <leader>/ <c-^>
 
 " Easier way to switch between open/closing brace
 map <tab> %
