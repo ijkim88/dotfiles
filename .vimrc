@@ -2,12 +2,6 @@
 " VIM General Configuration
 """""""""""""""""""""""""""
 
-" Set color scheme
-"colorscheme solarized
-"let g:solarized_termcolors=256
-"let g:solarized_termtrans=1
-"set background=dark
-
 " Set mapleader to ,
 let mapleader = ","
 
@@ -28,8 +22,6 @@ set history=1000
 
 " Terminal settings
 set encoding=utf8
-"let base16colorspace=256
-"set t_Co=256
 
 " Fix backspace
 set backspace=2
@@ -65,13 +57,6 @@ nnoremap <leader>cs <c-w>c
 set splitbelow
 set splitright
 
-" Easier split management
-nnoremap <leader>w= <c-w>=
-nnoremap <leader>w> 5<c-w>>
-nnoremap <leader>w< 5<c-w><
-nnoremap <leader>w+ 5<c-w>+
-nnoremap <leader>w- 5<c-w>-
-
 """"""""""""""""""""""""""
 " Navigation Configuration
 """"""""""""""""""""""""""
@@ -106,7 +91,7 @@ set ignorecase
 " When searching try to be smart about cases
 set smartcase
 
-" Highlight the search results
+" Disable search results highlight
 set nohlsearch
 
 " Highlight chars as you type search
@@ -114,9 +99,6 @@ set incsearch
 
 " Set magic on for regex
 set magic
-
-" Clear search
-nnoremap <leader><space> :noh<cr>
 
 """""""""""""""""""
 " Tab Configuration
