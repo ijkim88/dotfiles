@@ -10,8 +10,6 @@ if [ -f ~/.bashrc ]; then
 fi
 
 # User specific environment and startup programs
-
-export PATH=$HOME/.linuxbrew/bin:$HOME/.linuxbrew/sbin:$PATH
 export EDITOR='vim'
 
 # History settings
@@ -21,3 +19,8 @@ export EDITOR='vim'
 export HISTSIZE=10000
 export HISTIGNORE='clear:history'
 export HISTCONTROL='ignoreboth'
+
+# Homebrew
+if [ -x "$(command -v brew)" ]; then
+    eval $(brew shellenv)
+fi
